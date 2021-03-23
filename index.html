@@ -9,12 +9,13 @@
       name="description"
       content="子どもにこちらのゲームを知ってもらいたい"
     />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="sections">
-      <section class="mario">
+      <section class="Mario">
         <div class="top">
           <div class="big-mario">
             <img src="./mario/big-mario.png" alt="3D Mario Jumping" />
@@ -59,12 +60,62 @@
           </div>
         </div>
         <div class="right-link"></div>
+        <audio id="zelda-song" src="./zelda/zelda-song.mp3"></audio>
       </section>
 
-      <section class="pokemon">
-        <div class="pokemon-logo"></div>
-        <div class="pokeball"></div>
+      <section class="Pokemon">
+        <div class="pokemon-logo">
+          <img src="./pokemon/pokemon-logo.png" alt="Pokemon Logo" />
+        </div>
+        <div class="poke-fight">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png"
+            class="pokemon"
+            id="opponent"
+          />
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/25.png"
+            class="pokemon"
+            id="self"
+          />
+        </div>
+        <div class="pokeball">
+          <img src="./pokemon/pokeball.png" alt="Pokeball" />
+        </div>
         <div class="running-pikachu"></div>
+        <audio id="battle-song" src="./pokemon/pokemon-battle.mp3"></audio>
+      </section>
+
+      <section class="Animal-Crossing">
+        <img
+          class="animal-crossing-logo"
+          src="./animal-crossing/animal-crossing-logo.png"
+          alt="Animal Crossing logo"
+        />
+        <div class="murabito-container">
+          <img
+            class="murabito"
+            src="./animal-crossing/murabito.gif"
+            alt="changing faces"
+          />
+        </div>
+        <img
+          class="slider"
+          src="./animal-crossing/kk-slider.png"
+          alt="Playing Guitar"
+        />
+        <div class="puzzle-box"></div>
+        <audio
+          src="./animal-crossing/welcome-horizons.mp3"
+          id="new-horizons"
+        ></audio>
+      </section>
+
+      <section class="Kirby">
+        <div class="kirby">
+          <img src="./kirby/kirby.png" alt="Kirby" />
+        </div>
+        <p class="orei">　ありがとうございました</p>
       </section>
 
       <script src="./app.js"></script>
