@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>せかいかんがひろがるゲーム</title>
+    <meta
+      name="description"
+      content="子どもにこちらのゲームを知ってもらいたい"
+    />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="sections">
+      <section class="mario">
+        <div class="top">
+          <div class="big-mario">
+            <img src="./mario/big-mario.png" alt="3D Mario Jumping" />
+          </div>
+          <div class="question-block">
+            <img src="./mario/question-block.png" alt="3D Question Block" />
+          </div>
+        </div>
+        <div class="action-block">
+          <img src="./mario/action-block.png" alt="8bit action block" />
+          <img class="hint" src="./mario/hint.svg" alt="Click here" />
+        </div>
+        <div class="bottom">
+          <div class="small-mario">
+            <img src="./mario/small-mario.png" alt="8bit Mario" />
+          </div>
+          <div class="jumping-mario">
+            <img src="./mario/jumping-mario.png" alt="8bit Mario jumping" />
+          </div>
+          <div class="mario-logo">
+            <img src="./mario/mario-logo.png" alt="Mario Logo" />
+          </div>
+        </div>
+        <audio id="mario-voice" src="./mario/sm64_mario_here_we_go.wav"></audio>
+      </section>
+
+      <section class="Link">
+        <div class="navi">
+          <div class="asa-g-e"></div>
+          <div class="asa-g-d"></div>
+          <div class="asa-p-e"></div>
+          <div class="asa-p-d"></div>
+          <div class="corpo"></div>
+        </div>
+        <audio id="hey-listen" src="./zelda/Navi Hey Listen.mp3"></audio>
+        <div class="triforce">
+          <img src="./zelda/triforce.png" alt="" />
+        </div>
+        <div class="left-link">
+          <div id="zelda-logo" class="zelda-logo">
+            <img src="./zelda/zelda-logo.png" alt="" />
+          </div>
+        </div>
+        <div class="right-link"></div>
+      </section>
+
+      <section class="pokemon">
+        <div class="pokemon-logo"></div>
+        <div class="pokeball"></div>
+        <div class="running-pikachu"></div>
+      </section>
+
+      <script src="./app.js"></script>
+    </div>
+  </body>
+</html>

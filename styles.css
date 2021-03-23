@@ -1,0 +1,372 @@
+* {
+  overflow-x: hidden !important;
+}
+
+html,
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sections {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(300px);
+  scroll-snap-type: y mandatory;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+/* MARIO */
+
+.mario > .top,
+.mario > .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.mario > .top {
+  height: 80%;
+  background-color: #fb3336;
+  z-index: 3;
+}
+
+.mario > .bottom {
+  height: 20%;
+  background-color: white;
+  transition: all 10s;
+  z-index: 6;
+}
+
+.big-mario {
+  position: absolute;
+  bottom: -100vh;
+  right: 50%;
+  z-index: 5;
+}
+
+.small-mario,
+.jumping-mario {
+  position: absolute;
+  left: 33%;
+  top: 50%;
+}
+
+.jumping-mario {
+  display: none;
+  z-index: 2;
+  transition: all 10s;
+}
+
+.action-block {
+  position: absolute;
+  bottom: calc(20vh + 20px);
+  left: 50%;
+  cursor: pointer;
+  z-index: 1999;
+}
+
+.hint {
+  padding-bottom: 30px;
+}
+
+.mario-logo img {
+  max-width: 200px;
+  opacity: 0;
+}
+
+.jump {
+  animation: jump 1s ease 0s 1 forwards;
+}
+
+.show {
+  animation: show 1s ease 1s 1 forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-110vh);
+  }
+}
+
+/* ZELDA */
+
+section.zelda {
+  background: #000;
+  position: relative;
+}
+
+.navi {
+  cursor: pointer;
+  position: absolute;
+  height: 300px;
+  width: 500px;
+  left: 0;
+  top: 0;
+  animation: voo 6s ease-in-out infinite;
+  z-index: 1894;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes voo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-45px);
+  }
+}
+
+.corpo {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background: #d5edf5;
+  border-radius: 50%;
+  top: 100px;
+  left: 50%;
+  opacity: 0.98;
+  margin-left: -45px;
+  box-shadow: 0 0 20px #a08bf7, 0 0 40px rgba(187, 177, 230, 1),
+    0 0 60px rgba(187, 177, 230, 0.6), 0 0 80px rgba(187, 177, 230, 0.9),
+    0 0 30px 70px rgba(250, 232, 130, 0.1);
+  animation: cresce 1s infinite;
+}
+
+@keyframes cresce {
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.asa-g-e {
+  position: absolute;
+  height: 95px;
+  width: 65px;
+  background: #fff;
+  border-radius: 100% 5px 100% 10%;
+  top: 18px;
+  left: 195px;
+  transform: rotate(-45deg);
+  opacity: 0.7;
+  box-shadow: 0 0 40px rgba(187, 177, 230, 1);
+  animation: asa 3s infinite;
+  transform-origin: 50% 100%;
+}
+
+@keyframes asa {
+  0% {
+    transform: rotate(-65deg);
+  }
+  12.5% {
+    transform: rotate(-90deg);
+  }
+  25% {
+    transform: rotate(-65deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-65deg);
+  }
+}
+
+.asa-g-d {
+  position: absolute;
+  height: 95px;
+  width: 65px;
+  background: #fff;
+  border-radius: 5px 100% 10%;
+  top: 18px;
+  left: 238px;
+  opacity: 0.7;
+  box-shadow: 0 0 40px rgba(187, 177, 230, 1);
+  animation: asa-e 3s infinite;
+  transform-origin: 50% 100%;
+}
+
+@keyframes asa-e {
+  0% {
+    transform: rotate(65deg);
+  }
+  12.5% {
+    transform: rotate(90deg);
+  }
+  25% {
+    transform: rotate(65deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(65deg);
+  }
+}
+
+.asa-p-e {
+  position: absolute;
+  height: 40px;
+  width: 30px;
+  background: #fff;
+  border-radius: 180% 30% 130% 25%;
+  top: 178px;
+  left: 202px;
+  opacity: 0.7;
+  box-shadow: 0 0 40px rgba(187, 177, 230, 1);
+  animation: asa-p-e 3s linear infinite;
+  transform-origin: 100% 0%;
+}
+
+@keyframes asa-p-e {
+  0% {
+    transform: rotate(15deg);
+  }
+  12.5% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+.asa-p-d {
+  position: absolute;
+  height: 40px;
+  width: 30px;
+  background: #fff;
+  border-radius: 30% 180% 25% 130%;
+  top: 174px;
+  left: 266px;
+  opacity: 0.7;
+  box-shadow: 0 0 40px rgba(187, 177, 230, 1);
+  animation: asa-p-d 3s linear infinite;
+  transform-origin: 50% 0%;
+}
+
+@keyframes asa-p-d {
+  0% {
+    transform: rotate(-15deg);
+  }
+  12.5% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+.triforce {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Link */
+
+section.Link {
+  display: flex;
+}
+
+.left-link {
+  height: 100vh;
+  width: 60vw;
+  background-color: #476d58;
+  background-image: url("./zelda/link-vector.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-link {
+  height: 100vh;
+  width: 40vw;
+  background: #000;
+  background-image: url("./zelda/link-illustration.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.zelda-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zelda-logo img {
+  width: 40%;
+}
+
+/* Pokemon  */
+
+section.pokemon {
+  background-color: #fee100;
+}
+
+@keyframes runningmon {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 115vw;
+  }
+}
+
+.running-pikachu {
+  width: 150px;
+  height: 110px;
+  background: url("./pokemon/pikachu.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  animation: runningmon 4s infinite;
+}
